@@ -1,0 +1,6 @@
+framework module Pods_WindscribeChallenge {
+  umbrella header "Pods-WindscribeChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
