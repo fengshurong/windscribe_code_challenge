@@ -88,10 +88,14 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
             if let selectedLocation = viewModel.selectedLocation,
                 selectedLocation.id == viewModel.locationAt(indexPath: indexPath).id {
                 self.viewModel.selectedLocation = nil
+                self.tableView.beginUpdates()
                 self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.tableView.endUpdates()
             } else {
                 self.viewModel.selectedLocation = viewModel.locationAt(indexPath: indexPath)
+                self.tableView.beginUpdates()
                 self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.tableView.endUpdates()
             }
         }
     }

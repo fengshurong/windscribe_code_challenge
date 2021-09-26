@@ -29,6 +29,12 @@ class ServerLocationTableViewCell: UITableViewCell {
         tableView.rowHeight = CGFloat(50)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        expandButton.setTitle("", for: .normal)
+        expandButton.backgroundColor = .clear
+        expandButton.setImage(UIImage(named: "close_ic"), for: .selected)
+        expandButton.setImage(UIImage(named: "expand_ic"), for: .normal)
+        expandButton.isUserInteractionEnabled = false
     }
     
     private var location: Location!
@@ -39,8 +45,10 @@ class ServerLocationTableViewCell: UITableViewCell {
         self.location = location
         if let selectedLocation = selectedLocation, selectedLocation.id == location.id {
             self.tableViewHeightConstraint.constant = CGFloat(self.location.nodes.count * 50)
+            self.expandButton.isSelected = true
         } else {
             self.tableViewHeightConstraint.constant = 0
+            self.expandButton.isSelected = false
         }
         self.tableView.reloadData()
     }

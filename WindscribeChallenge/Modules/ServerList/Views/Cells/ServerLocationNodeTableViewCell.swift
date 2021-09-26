@@ -19,7 +19,7 @@ class ServerLocationNodeTableViewCell: UITableViewCell {
     func configurate(_ node: Node) {
         let ip: String = node.ip ?? ""
         let group: String = node.group ?? ""
-        self.groupNameLbl.text = group + " - " + ip
+        self.groupNameLbl.text = "- " + group + " - " + ip
     }
     
 }

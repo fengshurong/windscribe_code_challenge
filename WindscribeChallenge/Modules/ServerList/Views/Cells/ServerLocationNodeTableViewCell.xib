@@ -17,15 +17,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-JY-5ZJ">
-                        <rect key="frame" x="15" y="15" width="290" height="14"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-JY-5ZJ">
+                        <rect key="frame" x="25" y="15" width="280" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="X5B-JY-5ZJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="G2W-F3-7me"/>
+                    <constraint firstItem="X5B-JY-5ZJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="G2W-F3-7me"/>
                     <constraint firstItem="X5B-JY-5ZJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="K8d-2S-BP8"/>
                     <constraint firstAttribute="trailing" secondItem="X5B-JY-5ZJ" secondAttribute="trailing" constant="15" id="PsM-Va-p7r"/>
                     <constraint firstAttribute="bottom" secondItem="X5B-JY-5ZJ" secondAttribute="bottom" constant="15" id="p9h-Xf-7EQ"/>
