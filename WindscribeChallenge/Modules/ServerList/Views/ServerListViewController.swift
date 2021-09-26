@@ -34,7 +34,14 @@ class ServerListViewController: ViewController {
         viewModel.retriveServerList(success: {[weak self] in
             self?.updateView()
         }, error: { error in
-            print(error?.localizedDescription)
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        })
+        
+        viewModel.vpnStatusDidChange(didChange: {[weak self] in
+            self?.updateStatusView()
+            self?.updateView()
         })
     }
     
@@ -50,10 +57,20 @@ class ServerListViewController: ViewController {
         tableView.dataSource = self
     }
     
+    private func updateStatusView() {
+        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+    }
+    
     private func updateView() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+    
+    private func connectVPN(config: VPNConfiguration) {
+        self.viewModel.connectVPN(config, onError: { msg in
+            print("msg")
+        })
     }
 }
 
@@ -71,6 +88,8 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerStatusConnectionTableViewCell", for: indexPath) as? ServerStatusConnectionTableViewCell else {
                 return .init()
             }
+            cell.configure(viewModel.connectingLocationNode,
+                           viewModel.status)
             cell.selectionStyle = .none
             return cell
         }
@@ -80,6 +99,13 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.configureData(viewModel.locationAt(indexPath: indexPath),
                            viewModel.selectedLocation)
+        cell.didSelectedLocationNode = { [unowned self] location, node in
+            self.viewModel.connectingLocation = location
+            self.viewModel.connectingLocationNode = node
+            let config = VPNConfiguration(location, node)
+            self.connectVPN(config: config)
+            self.updateStatusView()
+        }
         return cell
     }
     

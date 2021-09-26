@@ -7,15 +7,35 @@
 
 import Foundation
 import UIKit
+import NetworkExtension
 
 class ServerListViewModel {
     
     private let service: WindscribeApi
     var locations = [Location]()
     var selectedLocation: Location?
+    var connectingLocation: Location?
+    var connectingLocationNode: Node?
+    var status: NEVPNStatus = VPNManager.shared.status
     
     init(service: WindscribeApi) {
         self.service = service
+    }
+    
+    func vpnStatusDidChange(didChange: (() -> Void)?) {
+        VPNManager.shared.statusDidChange = {[weak self] status in
+            self?.status = status
+            didChange?()
+        }
+    }
+    
+    func connectVPN(_ config: VPNConfiguration,
+                    onError: @escaping ((String) -> Void)) {
+        if VPNManager.shared.isDisconnected {
+            VPNManager.shared.connectIKEv2(config: config, onError: onError)
+        } else {
+            VPNManager.shared.disconnect(completionHandler: nil)
+        }
     }
     
     func retriveServerList(success: @escaping (() -> Void),

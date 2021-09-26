@@ -27,6 +27,7 @@
 		7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D7892700685B00B64842 /* ServerListViewController.swift */; };
 		7574D78F270068D100B64842 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D78E270068D100B64842 /* Application.swift */; };
 		7574D79127006B3900B64842 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D79027006B3900B64842 /* ServerListViewModel.swift */; };
+		7583FA712700C87200441A7C /* VPNConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583FA702700C87200441A7C /* VPNConfiguration.swift */; };
 		75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B127006F3000C80AB5 /* ServerList.storyboard */; };
 		75FA15B727006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */; };
 		75FA15B827006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */; };
@@ -77,6 +78,7 @@
 		7574D7892700685B00B64842 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
 		7574D78E270068D100B64842 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		7574D79027006B3900B64842 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
+		7583FA702700C87200441A7C /* VPNConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConfiguration.swift; sourceTree = "<group>"; };
 		75FA15B127006F3000C80AB5 /* ServerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServerList.storyboard; sourceTree = "<group>"; };
 		75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatusConnectionTableViewCell.swift; sourceTree = "<group>"; };
 		75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerStatusConnectionTableViewCell.xib; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				7574D77727005EF700B64842 /* Location.swift */,
 				7574D77927005F6800B64842 /* Node.swift */,
 				7574D77E270060FB00B64842 /* ServerResponse.swift */,
+				7583FA702700C87200441A7C /* VPNConfiguration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				7574D77D2700604200B64842 /* WindscribeApi.swift in Sources */,
 				7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */,
 				7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */,
+				7583FA712700C87200441A7C /* VPNConfiguration.swift in Sources */,
 				04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */,
 				04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */,
 			);

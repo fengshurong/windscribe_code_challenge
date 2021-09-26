@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class ServerStatusConnectionTableViewCell: UITableViewCell {
 
@@ -24,6 +25,19 @@ class ServerStatusConnectionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    
+    func configure(_ node: Node?,
+                   _ status: NEVPNStatus) {
+        statusValueLbl.text = status.message
+        if let node = node {
+            grouplbl.isHidden = false
+            grouplbl.text = node.group
+            if status == .connected {
+                statusSwitch.isOn = true
+            } else if status == .disconnected || status == .disconnecting || status == .invalid {
+                statusSwitch.isOn = false
+            }
+        } else {
+            grouplbl.isHidden = true
+        }
+    }
 }

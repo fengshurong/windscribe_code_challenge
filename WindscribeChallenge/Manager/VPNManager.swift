@@ -8,6 +8,27 @@
 import Foundation
 import NetworkExtension
 
+extension NEVPNStatus {
+    var message: String {
+        switch self {
+        case .invalid:
+            return "Invalid"
+        case .disconnected:
+            return "Disconnected"
+        case .connecting:
+            return "Connecting"
+        case .connected:
+            return "Connected"
+        case .reasserting:
+            return "Reasserting"
+        case .disconnecting:
+            return "Disconnecting"
+        @unknown default:
+            fatalError()
+        }
+    }
+}
+
 final class VPNManager: NSObject {
     
     static let shared: VPNManager = {
@@ -24,6 +45,8 @@ final class VPNManager: NSObject {
     public var status: NEVPNStatus {
         return self.manager.connection.status
     }
+    
+    var statusDidChange: ((NEVPNStatus) -> Void)?
     
     private override init() {
         super.init()
@@ -49,6 +72,7 @@ final class VPNManager: NSObject {
         } else if self.manager.connection.status == .connected {
             print("VPN Connected")
         }
+        self.statusDidChange?(self.manager.connection.status)
     }
     
     private func loadProfile(completion: ((Bool) -> Void)?) {
@@ -74,7 +98,7 @@ final class VPNManager: NSObject {
         }
     }
     
-    func connectIKEv2(config: ConfigurationProtocol,
+    func connectIKEv2(config: VPNConfiguration,
                       onError: @escaping (String) -> Void) {
         let protocolConfiguration = NEVPNProtocolIKEv2()
         
@@ -143,11 +167,4 @@ final class VPNManager: NSObject {
             completionHandler?()
         }
     }
-}
-
-protocol ConfigurationProtocol {
-    var serverAddress: String { get }
-    var username: String { get }
-    var password: Data? { get }
-    var remoteIdentifier: String { get }
 }

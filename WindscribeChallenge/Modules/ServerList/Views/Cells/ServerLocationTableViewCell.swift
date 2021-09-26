@@ -15,6 +15,8 @@ class ServerLocationTableViewCell: UITableViewCell {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
+    var didSelectedLocationNode: ((Location, Node) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -75,5 +77,10 @@ extension ServerLocationTableViewCell: UITableViewDelegate, UITableViewDataSourc
         let node = self.location.nodes[indexPath.row]
         cell.configurate(node)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let node = self.location.nodes[indexPath.row]
+        self.didSelectedLocationNode?(self.location, node)
     }
 }
