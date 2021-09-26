@@ -34,7 +34,7 @@ class ServerListViewController: ViewController {
         viewModel.retriveServerList(success: {[weak self] in
             self?.updateView()
         }, error: { error in
-            print(error.localizedDescription)
+            print(error?.localizedDescription)
         })
     }
     

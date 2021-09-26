@@ -11,7 +11,7 @@ import UIKit
 class ServerListViewModel {
     
     private let service: WindscribeApi
-    private var locations = [Location]()
+    var locations = [Location]()
     var selectedLocation: Location?
     
     init(service: WindscribeApi) {
@@ -19,7 +19,7 @@ class ServerListViewModel {
     }
     
     func retriveServerList(success: @escaping (() -> Void),
-                           error: @escaping ((ErrorData) -> Void)) {
+                           error: @escaping ((ErrorData?) -> Void)) {
         self.service.fetchServerList(completionHandler: { [weak self] result in
             switch result {
             case .success(let response):

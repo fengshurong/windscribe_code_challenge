@@ -16,7 +16,6 @@
 		04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */; };
 		7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7574D7622700216C00B64842 /* NetworkExtension.framework */; };
 		7574D76A270045EF00B64842 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D769270045EF00B64842 /* VPNManager.swift */; };
-		7574D76D270049D100B64842 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D76C270049D100B64842 /* String.swift */; };
 		7574D772270058E100B64842 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D770270058E100B64842 /* KeychainWrapper.swift */; };
 		7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D771270058E100B64842 /* KeychainItemAccessibility.swift */; };
 		7574D77827005EF700B64842 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D77727005EF700B64842 /* Location.swift */; };
@@ -35,7 +34,11 @@
 		75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */; };
 		75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */; };
 		75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */; };
-		75FA15D72700903A00C80AB5 /* WindscribeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */; };
+		75FA15FA2700A7D500C80AB5 /* WindscribeAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15F92700A7D500C80AB5 /* WindscribeAPIServiceTests.swift */; };
+		75FA15FC2700AC9200C80AB5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15FB2700AC9200C80AB5 /* MockURLProtocol.swift */; };
+		75FA15FF2700AD5A00C80AB5 /* Locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15FE2700AD5A00C80AB5 /* Locations.json */; };
+		75FA16032700B38B00C80AB5 /* ServerListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA16022700B38B00C80AB5 /* ServerListViewModelTests.swift */; };
+		75FA16052700B7AC00C80AB5 /* ServerListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA16042700B7AC00C80AB5 /* ServerListViewControllerTests.swift */; };
 		E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +66,6 @@
 		7574D7612700216B00B64842 /* WindscribeChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindscribeChallenge.entitlements; sourceTree = "<group>"; };
 		7574D7622700216C00B64842 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		7574D769270045EF00B64842 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
-		7574D76C270049D100B64842 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7574D770270058E100B64842 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		7574D771270058E100B64842 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		7574D77727005EF700B64842 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -83,7 +85,11 @@
 		75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationNodeTableViewCell.swift; sourceTree = "<group>"; };
 		75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationNodeTableViewCell.xib; sourceTree = "<group>"; };
 		75FA15D42700903A00C80AB5 /* WindscribeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindscribeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeChallengeTests.swift; sourceTree = "<group>"; };
+		75FA15F92700A7D500C80AB5 /* WindscribeAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeAPIServiceTests.swift; sourceTree = "<group>"; };
+		75FA15FB2700AC9200C80AB5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		75FA15FE2700AD5A00C80AB5 /* Locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Locations.json; sourceTree = "<group>"; };
+		75FA16022700B38B00C80AB5 /* ServerListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModelTests.swift; sourceTree = "<group>"; };
+		75FA16042700B7AC00C80AB5 /* ServerListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewControllerTests.swift; sourceTree = "<group>"; };
 		9F77FC365F61B333EE2DDE89 /* Pods-WindscribeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BB61F6117A97594D81B26A /* Pods-WindscribeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.release.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +141,6 @@
 				7574D7852700682600B64842 /* Modules */,
 				7574D767270045CC00B64842 /* Common */,
 				7574D764270044F800B64842 /* Delegates */,
-				7574D76B270049C700B64842 /* Extensions */,
 				7574D768270045DC00B64842 /* Manager */,
 				7574D77627005E1000B64842 /* Models */,
 				7574D77B2700601A00B64842 /* Network */,
@@ -190,14 +195,6 @@
 				7574D769270045EF00B64842 /* VPNManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		7574D76B270049C700B64842 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7574D76C270049D100B64842 /* String.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7574D76E270058C400B64842 /* ThirdParty */ = {
@@ -304,8 +301,9 @@
 		75FA15D52700903A00C80AB5 /* WindscribeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				75FA16002700B37500C80AB5 /* Modules */,
+				75FA15FD2700AD3500C80AB5 /* JSON */,
 				75FA15F82700A5AF00C80AB5 /* Network */,
-				75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */,
 			);
 			path = WindscribeChallengeTests;
 			sourceTree = "<group>";
@@ -313,8 +311,35 @@
 		75FA15F82700A5AF00C80AB5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				75FA15F92700A7D500C80AB5 /* WindscribeAPIServiceTests.swift */,
+				75FA15FB2700AC9200C80AB5 /* MockURLProtocol.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		75FA15FD2700AD3500C80AB5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15FE2700AD5A00C80AB5 /* Locations.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		75FA16002700B37500C80AB5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				75FA16012700B37F00C80AB5 /* ServerList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		75FA16012700B37F00C80AB5 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
+				75FA16022700B38B00C80AB5 /* ServerListViewModelTests.swift */,
+				75FA16042700B7AC00C80AB5 /* ServerListViewControllerTests.swift */,
+			);
+			path = ServerList;
 			sourceTree = "<group>";
 		};
 		DB77BF90547A7EFC9708BEC6 /* Pods */ = {
@@ -422,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FA15FF2700AD5A00C80AB5 /* Locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +503,6 @@
 			files = (
 				7574D78F270068D100B64842 /* Application.swift in Sources */,
 				7574D79127006B3900B64842 /* ServerListViewModel.swift in Sources */,
-				7574D76D270049D100B64842 /* String.swift in Sources */,
 				7574D77F270060FB00B64842 /* ServerResponse.swift in Sources */,
 				7574D77A27005F6800B64842 /* Node.swift in Sources */,
 				04A67C5426FF402E003DBDB0 /* ViewController.swift in Sources */,
@@ -502,7 +527,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75FA15D72700903A00C80AB5 /* WindscribeChallengeTests.swift in Sources */,
+				75FA15FA2700A7D500C80AB5 /* WindscribeAPIServiceTests.swift in Sources */,
+				75FA15FC2700AC9200C80AB5 /* MockURLProtocol.swift in Sources */,
+				75FA16032700B38B00C80AB5 /* ServerListViewModelTests.swift in Sources */,
+				75FA16052700B7AC00C80AB5 /* ServerListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
