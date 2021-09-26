@@ -33,8 +33,22 @@ final class VPNManager: NSObject {
                                                object: nil)
     }
     
-    @objc private func statusDidChange(_: Notification?) {
+    @objc private func statusDidChange(_ notification: Notification?) {
         // Notify do somethings
+        print(#function)
+        if self.manager.connection.status == .invalid {
+            print("VPN configuration is invalid")
+        } else if self.manager.connection.status == .disconnected {
+            print("VPN is disconnected.")
+        } else if self.manager.connection.status == .connecting {
+            print("VPN is connecting...")
+        } else if self.manager.connection.status == .reasserting {
+            print("VPN is reasserting...")
+        } else if self.manager.connection.status == .disconnecting {
+            print("VPN is disconnecting...")
+        } else if self.manager.connection.status == .connected {
+            print("VPN Connected")
+        }
     }
     
     private func loadProfile(completion: ((Bool) -> Void)?) {
@@ -64,11 +78,25 @@ final class VPNManager: NSObject {
                       onError: @escaping (String) -> Void) {
         let protocolConfiguration = NEVPNProtocolIKEv2()
         
+        protocolConfiguration.authenticationMethod = .none
         protocolConfiguration.serverAddress = config.serverAddress
         protocolConfiguration.username = config.username
         protocolConfiguration.passwordReference = config.password.utf8Encoded
         protocolConfiguration.remoteIdentifier = config.remoteIdentifier
         protocolConfiguration.useExtendedAuthentication = true
+        
+        protocolConfiguration.useConfigurationAttributeInternalIPSubnet = false
+        protocolConfiguration.disconnectOnSleep = false
+        
+        protocolConfiguration.ikeSecurityAssociationParameters.encryptionAlgorithm = .algorithmAES256GCM
+        protocolConfiguration.ikeSecurityAssociationParameters.diffieHellmanGroup = .group21
+        protocolConfiguration.ikeSecurityAssociationParameters.integrityAlgorithm = .SHA256
+        protocolConfiguration.ikeSecurityAssociationParameters.lifetimeMinutes = 1440
+        
+        protocolConfiguration.childSecurityAssociationParameters.encryptionAlgorithm  = .algorithmAES256GCM
+        protocolConfiguration.childSecurityAssociationParameters.diffieHellmanGroup = .group21
+        protocolConfiguration.childSecurityAssociationParameters.integrityAlgorithm = .SHA256
+        protocolConfiguration.childSecurityAssociationParameters.lifetimeMinutes = 1440
         
         self.loadProfile(completion: { _ in
             self.manager.protocolConfiguration = protocolConfiguration
