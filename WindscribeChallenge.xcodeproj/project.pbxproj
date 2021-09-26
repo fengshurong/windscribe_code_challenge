@@ -14,6 +14,9 @@
 		04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */; };
 		04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5B26FF4030003DBDB0 /* Assets.xcassets */; };
 		04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */; };
+		7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7574D7622700216C00B64842 /* NetworkExtension.framework */; };
+		7574D76A270045EF00B64842 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D769270045EF00B64842 /* VPNManager.swift */; };
+		7574D76D270049D100B64842 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D76C270049D100B64842 /* String.swift */; };
 		E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,10 @@
 		04A67C5E26FF4030003DBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A67C6026FF4030003DBDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindscribeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7574D7612700216B00B64842 /* WindscribeChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindscribeChallenge.entitlements; sourceTree = "<group>"; };
+		7574D7622700216C00B64842 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		7574D769270045EF00B64842 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		7574D76C270049D100B64842 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9F77FC365F61B333EE2DDE89 /* Pods-WindscribeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BB61F6117A97594D81B26A /* Pods-WindscribeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.release.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */,
+				7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,14 +73,11 @@
 		04A67C4E26FF402E003DBDB0 /* WindscribeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				04A67C4F26FF402E003DBDB0 /* AppDelegate.swift */,
-				04A67C5126FF402E003DBDB0 /* SceneDelegate.swift */,
-				04A67C5326FF402E003DBDB0 /* ViewController.swift */,
-				04A67C5526FF402E003DBDB0 /* Main.storyboard */,
-				04A67C5B26FF4030003DBDB0 /* Assets.xcassets */,
-				04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */,
-				04A67C6026FF4030003DBDB0 /* Info.plist */,
-				04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */,
+				7574D76B270049C700B64842 /* Extensions */,
+				7574D768270045DC00B64842 /* Manager */,
+				7574D767270045CC00B64842 /* Common */,
+				7574D7662700451B00B64842 /* Resources */,
+				7574D764270044F800B64842 /* Delegates */,
 			);
 			path = WindscribeChallenge;
 			sourceTree = "<group>";
@@ -80,9 +85,56 @@
 		2309A33CE14BADA65CB73BB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7574D7622700216C00B64842 /* NetworkExtension.framework */,
 				74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7574D764270044F800B64842 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				04A67C4F26FF402E003DBDB0 /* AppDelegate.swift */,
+				04A67C5126FF402E003DBDB0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		7574D7662700451B00B64842 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7574D7612700216B00B64842 /* WindscribeChallenge.entitlements */,
+				04A67C5526FF402E003DBDB0 /* Main.storyboard */,
+				04A67C5B26FF4030003DBDB0 /* Assets.xcassets */,
+				04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */,
+				04A67C6026FF4030003DBDB0 /* Info.plist */,
+				04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7574D767270045CC00B64842 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04A67C5326FF402E003DBDB0 /* ViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7574D768270045DC00B64842 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7574D769270045EF00B64842 /* VPNManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7574D76B270049C700B64842 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7574D76C270049D100B64842 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DB77BF90547A7EFC9708BEC6 /* Pods */ = {
@@ -179,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		3E5924EE5848590A26C56D21 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -227,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7574D76D270049D100B64842 /* String.swift in Sources */,
 				04A67C5426FF402E003DBDB0 /* ViewController.swift in Sources */,
 				04A67C5026FF402E003DBDB0 /* AppDelegate.swift in Sources */,
+				7574D76A270045EF00B64842 /* VPNManager.swift in Sources */,
 				04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */,
 				04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */,
 			);
@@ -378,13 +432,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WindscribeChallenge/Resources/WindscribeChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WindscribeChallenge/Info.plist;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				INFOPLIST_FILE = WindscribeChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.windscribe.thomas.WindscribeChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,13 +453,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WindscribeChallenge/Resources/WindscribeChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WindscribeChallenge/Info.plist;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				INFOPLIST_FILE = WindscribeChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.windscribe.thomas.WindscribeChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
