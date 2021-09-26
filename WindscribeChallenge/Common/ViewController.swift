@@ -21,6 +21,8 @@ class ViewController: UIViewController {
             VPNManager.shared.connectIKEv2(config: config) { msgError in
                 print("msg: \(msgError)")
             }
+        } else {
+            VPNManager.shared.disconnect(completionHandler: nil)
         }
     }
 }
@@ -38,8 +40,9 @@ class Test: ConfigurationProtocol {
         return "prd_test_j4d3vk6"
     }
     
-    var password: String {
-        return "xpcnwg6abh"
+    var password: Data? {
+        KeychainWrapper.standard.set("xpcnwg6abh", forKey: "pass_word")
+        return KeychainWrapper.standard.dataRef(forKey: "pass_word")
     }
     
     var remoteIdentifier: String {

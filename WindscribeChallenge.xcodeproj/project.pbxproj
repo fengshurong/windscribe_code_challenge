@@ -17,6 +17,8 @@
 		7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7574D7622700216C00B64842 /* NetworkExtension.framework */; };
 		7574D76A270045EF00B64842 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D769270045EF00B64842 /* VPNManager.swift */; };
 		7574D76D270049D100B64842 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D76C270049D100B64842 /* String.swift */; };
+		7574D772270058E100B64842 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D770270058E100B64842 /* KeychainWrapper.swift */; };
+		7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D771270058E100B64842 /* KeychainItemAccessibility.swift */; };
 		E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		7574D7622700216C00B64842 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		7574D769270045EF00B64842 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
 		7574D76C270049D100B64842 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7574D770270058E100B64842 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		7574D771270058E100B64842 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		9F77FC365F61B333EE2DDE89 /* Pods-WindscribeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BB61F6117A97594D81B26A /* Pods-WindscribeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.release.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +77,12 @@
 		04A67C4E26FF402E003DBDB0 /* WindscribeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				7574D767270045CC00B64842 /* Common */,
+				7574D764270044F800B64842 /* Delegates */,
 				7574D76B270049C700B64842 /* Extensions */,
 				7574D768270045DC00B64842 /* Manager */,
-				7574D767270045CC00B64842 /* Common */,
 				7574D7662700451B00B64842 /* Resources */,
-				7574D764270044F800B64842 /* Delegates */,
+				7574D76E270058C400B64842 /* ThirdParty */,
 			);
 			path = WindscribeChallenge;
 			sourceTree = "<group>";
@@ -137,6 +142,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7574D76E270058C400B64842 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7574D76F270058CF00B64842 /* Keychain */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		7574D76F270058CF00B64842 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				7574D771270058E100B64842 /* KeychainItemAccessibility.swift */,
+				7574D770270058E100B64842 /* KeychainWrapper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		DB77BF90547A7EFC9708BEC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +179,6 @@
 				04A67C4826FF402E003DBDB0 /* Sources */,
 				04A67C4926FF402E003DBDB0 /* Frameworks */,
 				04A67C4A26FF402E003DBDB0 /* Resources */,
-				3E5924EE5848590A26C56D21 /* [CP] Embed Pods Frameworks */,
 				04A67C6826FF432A003DBDB0 /* Swiftlint */,
 			);
 			buildRules = (
@@ -233,23 +254,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		3E5924EE5848590A26C56D21 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9764B78DC261307BDD1E9F15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,7 +286,9 @@
 				7574D76D270049D100B64842 /* String.swift in Sources */,
 				04A67C5426FF402E003DBDB0 /* ViewController.swift in Sources */,
 				04A67C5026FF402E003DBDB0 /* AppDelegate.swift in Sources */,
+				7574D772270058E100B64842 /* KeychainWrapper.swift in Sources */,
 				7574D76A270045EF00B64842 /* VPNManager.swift in Sources */,
+				7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */,
 				04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */,
 				04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */,
 			);

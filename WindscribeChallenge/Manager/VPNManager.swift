@@ -81,7 +81,7 @@ final class VPNManager: NSObject {
         protocolConfiguration.authenticationMethod = .none
         protocolConfiguration.serverAddress = config.serverAddress
         protocolConfiguration.username = config.username
-        protocolConfiguration.passwordReference = config.password.utf8Encoded
+        protocolConfiguration.passwordReference = config.password
         protocolConfiguration.remoteIdentifier = config.remoteIdentifier
         protocolConfiguration.useExtendedAuthentication = true
         
@@ -136,11 +136,18 @@ final class VPNManager: NSObject {
         return false
     }
     
+    func disconnect(completionHandler: (() -> Void)? = nil) {
+        manager.isOnDemandEnabled = false
+        manager.saveToPreferences { _ in
+            self.manager.connection.stopVPNTunnel()
+            completionHandler?()
+        }
+    }
 }
 
 protocol ConfigurationProtocol {
     var serverAddress: String { get }
     var username: String { get }
-    var password: String { get }
+    var password: Data? { get }
     var remoteIdentifier: String { get }
 }
