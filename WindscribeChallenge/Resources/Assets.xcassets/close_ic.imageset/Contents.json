@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "outline_clear_black_24pt_.png",
+      "filename" : "outline_close_black_24pt_.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "outline_clear_black_24pt_@2x.png",
+      "filename" : "outline_close_black_24pt_@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "outline_clear_black_24pt_@3x.png",
+      "filename" : "outline_close_black_24pt_@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

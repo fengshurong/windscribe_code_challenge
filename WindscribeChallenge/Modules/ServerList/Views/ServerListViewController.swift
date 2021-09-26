@@ -88,20 +88,21 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
             if let selectedLocation = viewModel.selectedLocation,
                 selectedLocation.id == viewModel.locationAt(indexPath: indexPath).id {
                 self.viewModel.selectedLocation = nil
-                self.tableView.beginUpdates()
-                self.tableView.reloadRows(at: [indexPath], with: .none)
-                self.tableView.endUpdates()
             } else {
                 self.viewModel.selectedLocation = viewModel.locationAt(indexPath: indexPath)
-                self.tableView.beginUpdates()
-                self.tableView.reloadRows(at: [indexPath], with: .none)
-                self.tableView.endUpdates()
             }
+            self.updateRowAt(indexPath: indexPath)
         }
     }
     
+    private func updateRowAt(indexPath: IndexPath) {
+        self.tableView.beginUpdates()
+        self.tableView.reloadRows(at: [indexPath], with: .none)
+        self.tableView.endUpdates()
+    }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  100
+        return  250
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

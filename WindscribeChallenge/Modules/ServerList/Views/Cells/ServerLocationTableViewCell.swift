@@ -24,6 +24,7 @@ class ServerLocationTableViewCell: UITableViewCell {
     private func configureView() {
         tableView.register(UINib(nibName: "ServerLocationNodeTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "ServerLocationNodeTableViewCell")
+        tableView.isScrollEnabled = false
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = UIView()
         tableView.rowHeight = CGFloat(50)

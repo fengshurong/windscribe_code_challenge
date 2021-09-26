@@ -35,8 +35,28 @@
 		75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */; };
 		75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */; };
 		75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */; };
+		75FA15C82700902200C80AB5 /* WindscribeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15C72700902200C80AB5 /* WindscribeChallengeUITests.swift */; };
+		75FA15CA2700902200C80AB5 /* WindscribeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15C92700902200C80AB5 /* WindscribeChallengeUITestsLaunchTests.swift */; };
+		75FA15D72700903A00C80AB5 /* WindscribeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */; };
 		E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75FA15CB2700902200C80AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A67C4426FF402E003DBDB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A67C4B26FF402E003DBDB0;
+			remoteInfo = WindscribeChallenge;
+		};
+		75FA15D82700903A00C80AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A67C4426FF402E003DBDB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A67C4B26FF402E003DBDB0;
+			remoteInfo = WindscribeChallenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04A67C4C26FF402E003DBDB0 /* WindscribeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindscribeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +91,11 @@
 		75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationTableViewCell.xib; sourceTree = "<group>"; };
 		75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationNodeTableViewCell.swift; sourceTree = "<group>"; };
 		75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationNodeTableViewCell.xib; sourceTree = "<group>"; };
+		75FA15C52700902200C80AB5 /* WindscribeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindscribeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FA15C72700902200C80AB5 /* WindscribeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeChallengeUITests.swift; sourceTree = "<group>"; };
+		75FA15C92700902200C80AB5 /* WindscribeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75FA15D42700903A00C80AB5 /* WindscribeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindscribeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeChallengeTests.swift; sourceTree = "<group>"; };
 		9F77FC365F61B333EE2DDE89 /* Pods-WindscribeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BB61F6117A97594D81B26A /* Pods-WindscribeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.release.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +110,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75FA15C22700902200C80AB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FA15D12700903A00C80AB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				04A67C4E26FF402E003DBDB0 /* WindscribeChallenge */,
+				75FA15C62700902200C80AB5 /* WindscribeChallengeUITests */,
+				75FA15D52700903A00C80AB5 /* WindscribeChallengeTests */,
 				04A67C4D26FF402E003DBDB0 /* Products */,
 				DB77BF90547A7EFC9708BEC6 /* Pods */,
 				2309A33CE14BADA65CB73BB7 /* Frameworks */,
@@ -102,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				04A67C4C26FF402E003DBDB0 /* WindscribeChallenge.app */,
+				75FA15C52700902200C80AB5 /* WindscribeChallengeUITests.xctest */,
+				75FA15D42700903A00C80AB5 /* WindscribeChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +322,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		75FA15C62700902200C80AB5 /* WindscribeChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15C72700902200C80AB5 /* WindscribeChallengeUITests.swift */,
+				75FA15C92700902200C80AB5 /* WindscribeChallengeUITestsLaunchTests.swift */,
+			);
+			path = WindscribeChallengeUITests;
+			sourceTree = "<group>";
+		};
+		75FA15D52700903A00C80AB5 /* WindscribeChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15D62700903A00C80AB5 /* WindscribeChallengeTests.swift */,
+			);
+			path = WindscribeChallengeTests;
+			sourceTree = "<group>";
+		};
 		DB77BF90547A7EFC9708BEC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,17 +370,61 @@
 			productReference = 04A67C4C26FF402E003DBDB0 /* WindscribeChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		75FA15C42700902200C80AB5 /* WindscribeChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75FA15CD2700902200C80AB5 /* Build configuration list for PBXNativeTarget "WindscribeChallengeUITests" */;
+			buildPhases = (
+				75FA15C12700902200C80AB5 /* Sources */,
+				75FA15C22700902200C80AB5 /* Frameworks */,
+				75FA15C32700902200C80AB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75FA15CC2700902200C80AB5 /* PBXTargetDependency */,
+			);
+			name = WindscribeChallengeUITests;
+			productName = WindscribeChallengeUITests;
+			productReference = 75FA15C52700902200C80AB5 /* WindscribeChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		75FA15D32700903A00C80AB5 /* WindscribeChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75FA15DA2700903A00C80AB5 /* Build configuration list for PBXNativeTarget "WindscribeChallengeTests" */;
+			buildPhases = (
+				75FA15D02700903A00C80AB5 /* Sources */,
+				75FA15D12700903A00C80AB5 /* Frameworks */,
+				75FA15D22700903A00C80AB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75FA15D92700903A00C80AB5 /* PBXTargetDependency */,
+			);
+			name = WindscribeChallengeTests;
+			productName = WindscribeChallengeTests;
+			productReference = 75FA15D42700903A00C80AB5 /* WindscribeChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		04A67C4426FF402E003DBDB0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					04A67C4B26FF402E003DBDB0 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					75FA15C42700902200C80AB5 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 04A67C4B26FF402E003DBDB0;
+					};
+					75FA15D32700903A00C80AB5 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 04A67C4B26FF402E003DBDB0;
 					};
 				};
 			};
@@ -338,6 +442,8 @@
 			projectRoot = "";
 			targets = (
 				04A67C4B26FF402E003DBDB0 /* WindscribeChallenge */,
+				75FA15C42700902200C80AB5 /* WindscribeChallengeUITests */,
+				75FA15D32700903A00C80AB5 /* WindscribeChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +460,20 @@
 				04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */,
 				75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */,
 				75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FA15C32700902200C80AB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FA15D22700903A00C80AB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +550,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75FA15C12700902200C80AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FA15CA2700902200C80AB5 /* WindscribeChallengeUITestsLaunchTests.swift in Sources */,
+				75FA15C82700902200C80AB5 /* WindscribeChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FA15D02700903A00C80AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FA15D72700903A00C80AB5 /* WindscribeChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75FA15CC2700902200C80AB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A67C4B26FF402E003DBDB0 /* WindscribeChallenge */;
+			targetProxy = 75FA15CB2700902200C80AB5 /* PBXContainerItemProxy */;
+		};
+		75FA15D92700903A00C80AB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A67C4B26FF402E003DBDB0 /* WindscribeChallenge */;
+			targetProxy = 75FA15D82700903A00C80AB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04A67C5526FF402E003DBDB0 /* Main.storyboard */ = {
@@ -610,6 +760,104 @@
 			};
 			name = Release;
 		};
+		75FA15CE2700902200C80AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie.WindscribeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WindscribeChallenge;
+			};
+			name = Debug;
+		};
+		75FA15CF2700902200C80AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie.WindscribeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WindscribeChallenge;
+			};
+			name = Release;
+		};
+		75FA15DB2700903A00C80AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie.WindscribeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WindscribeChallenge.app/WindscribeChallenge";
+			};
+			name = Debug;
+		};
+		75FA15DC2700903A00C80AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2TYLYAWMK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = core.movie.WindscribeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WindscribeChallenge.app/WindscribeChallenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -627,6 +875,24 @@
 			buildConfigurations = (
 				04A67C6426FF4030003DBDB0 /* Debug */,
 				04A67C6526FF4030003DBDB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75FA15CD2700902200C80AB5 /* Build configuration list for PBXNativeTarget "WindscribeChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FA15CE2700902200C80AB5 /* Debug */,
+				75FA15CF2700902200C80AB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75FA15DA2700903A00C80AB5 /* Build configuration list for PBXNativeTarget "WindscribeChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FA15DB2700903A00C80AB5 /* Debug */,
+				75FA15DC2700903A00C80AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
