@@ -25,6 +25,16 @@
 		7574D77F270060FB00B64842 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D77E270060FB00B64842 /* ServerResponse.swift */; };
 		7574D7812700627300B64842 /* WindscribeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D7802700627300B64842 /* WindscribeAPIService.swift */; };
 		7574D7842700661100B64842 /* WindscribeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D7832700661100B64842 /* WindscribeTarget.swift */; };
+		7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D7892700685B00B64842 /* ServerListViewController.swift */; };
+		7574D78F270068D100B64842 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D78E270068D100B64842 /* Application.swift */; };
+		7574D79127006B3900B64842 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D79027006B3900B64842 /* ServerListViewModel.swift */; };
+		75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B127006F3000C80AB5 /* ServerList.storyboard */; };
+		75FA15B727006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */; };
+		75FA15B827006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */; };
+		75FA15BB27006FC500C80AB5 /* ServerLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */; };
+		75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */; };
+		75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */; };
+		75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */; };
 		E54CC0A0FA9648ACCED69A90 /* Pods_WindscribeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A372E7BE5BD8078C39D265 /* Pods_WindscribeChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +61,16 @@
 		7574D77E270060FB00B64842 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		7574D7802700627300B64842 /* WindscribeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeAPIService.swift; sourceTree = "<group>"; };
 		7574D7832700661100B64842 /* WindscribeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindscribeTarget.swift; sourceTree = "<group>"; };
+		7574D7892700685B00B64842 /* ServerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewController.swift; sourceTree = "<group>"; };
+		7574D78E270068D100B64842 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		7574D79027006B3900B64842 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
+		75FA15B127006F3000C80AB5 /* ServerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServerList.storyboard; sourceTree = "<group>"; };
+		75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatusConnectionTableViewCell.swift; sourceTree = "<group>"; };
+		75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerStatusConnectionTableViewCell.xib; sourceTree = "<group>"; };
+		75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationTableViewCell.swift; sourceTree = "<group>"; };
+		75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationTableViewCell.xib; sourceTree = "<group>"; };
+		75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationNodeTableViewCell.swift; sourceTree = "<group>"; };
+		75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationNodeTableViewCell.xib; sourceTree = "<group>"; };
 		9F77FC365F61B333EE2DDE89 /* Pods-WindscribeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		F1BB61F6117A97594D81B26A /* Pods-WindscribeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindscribeChallenge.release.xcconfig"; path = "Target Support Files/Pods-WindscribeChallenge/Pods-WindscribeChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,12 +109,14 @@
 		04A67C4E26FF402E003DBDB0 /* WindscribeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				7574D77B2700601A00B64842 /* Network */,
-				7574D77627005E1000B64842 /* Models */,
+				7574D78D270068C500B64842 /* Application */,
+				7574D7852700682600B64842 /* Modules */,
 				7574D767270045CC00B64842 /* Common */,
 				7574D764270044F800B64842 /* Delegates */,
 				7574D76B270049C700B64842 /* Extensions */,
 				7574D768270045DC00B64842 /* Manager */,
+				7574D77627005E1000B64842 /* Models */,
+				7574D77B2700601A00B64842 /* Network */,
 				7574D7662700451B00B64842 /* Resources */,
 				7574D76E270058C400B64842 /* ThirdParty */,
 			);
@@ -201,6 +223,62 @@
 			path = Target;
 			sourceTree = "<group>";
 		};
+		7574D7852700682600B64842 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7574D7882700684100B64842 /* ServerList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7574D7882700684100B64842 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15B327006F6800C80AB5 /* ViewModel */,
+				75FA15B027006D6F00C80AB5 /* Views */,
+			);
+			path = ServerList;
+			sourceTree = "<group>";
+		};
+		7574D78D270068C500B64842 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7574D78E270068D100B64842 /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		75FA15B027006D6F00C80AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15B427006F9200C80AB5 /* Cells */,
+				7574D7892700685B00B64842 /* ServerListViewController.swift */,
+				75FA15B127006F3000C80AB5 /* ServerList.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75FA15B327006F6800C80AB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7574D79027006B3900B64842 /* ServerListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75FA15B427006F9200C80AB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */,
+				75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */,
+				75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */,
+				75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */,
+				75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */,
+				75FA15BE27006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		DB77BF90547A7EFC9708BEC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,8 +348,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */,
+				75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */,
 				04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */,
+				75FA15B827006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib in Resources */,
 				04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */,
+				75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */,
+				75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,18 +407,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7574D78F270068D100B64842 /* Application.swift in Sources */,
+				7574D79127006B3900B64842 /* ServerListViewModel.swift in Sources */,
 				7574D76D270049D100B64842 /* String.swift in Sources */,
 				7574D77F270060FB00B64842 /* ServerResponse.swift in Sources */,
 				7574D77A27005F6800B64842 /* Node.swift in Sources */,
 				04A67C5426FF402E003DBDB0 /* ViewController.swift in Sources */,
 				04A67C5026FF402E003DBDB0 /* AppDelegate.swift in Sources */,
 				7574D7812700627300B64842 /* WindscribeAPIService.swift in Sources */,
+				75FA15BB27006FC500C80AB5 /* ServerLocationTableViewCell.swift in Sources */,
 				7574D7842700661100B64842 /* WindscribeTarget.swift in Sources */,
 				7574D772270058E100B64842 /* KeychainWrapper.swift in Sources */,
 				7574D77827005EF700B64842 /* Location.swift in Sources */,
 				7574D76A270045EF00B64842 /* VPNManager.swift in Sources */,
+				75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */,
+				75FA15B727006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift in Sources */,
 				7574D77D2700604200B64842 /* WindscribeApi.swift in Sources */,
 				7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */,
+				7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */,
 				04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */,
 				04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */,
 			);

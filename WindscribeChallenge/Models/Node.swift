@@ -12,4 +12,7 @@ struct Node: Decodable {
     let ip: String?
     let ip2: String?
     let ip3: String?
+    let type: String?
+    let group: String?
+    let tz: String?
 }
