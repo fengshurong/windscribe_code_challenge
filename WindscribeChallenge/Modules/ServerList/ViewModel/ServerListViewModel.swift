@@ -31,11 +31,8 @@ class ServerListViewModel {
     
     func connectVPN(_ config: VPNConfiguration,
                     onError: @escaping ((String) -> Void)) {
-        if VPNManager.shared.isDisconnected {
-            VPNManager.shared.connectIKEv2(config: config, onError: onError)
-        } else {
-            VPNManager.shared.disconnect(completionHandler: nil)
-        }
+        VPNManager.shared.connectIKEv2(config: config,
+                                       onError: onError)
     }
     
     func retriveServerList(success: @escaping (() -> Void),
@@ -52,13 +49,10 @@ class ServerListViewModel {
     }
     
     func numberOfSections() -> Int {
-        return 2
+        return 1
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
         return self.locations.count
     }
     

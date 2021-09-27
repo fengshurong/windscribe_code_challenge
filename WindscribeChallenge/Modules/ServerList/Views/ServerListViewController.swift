@@ -21,6 +21,11 @@ class ServerListViewController: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var statusSwitch: UISwitch!
+    @IBOutlet weak var statusValueLbl: UILabel!
+    @IBOutlet weak var grouplbl: UILabel!
+    @IBOutlet weak var groupView: UIView!
+    
     var viewModel: ServerListViewModel!
     
     override func viewDidLoad() {
@@ -47,8 +52,6 @@ class ServerListViewController: ViewController {
     
     private func configureViuew() {
         title = "Server List"
-        tableView.register(UINib(nibName: "ServerStatusConnectionTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "ServerStatusConnectionTableViewCell")
         tableView.register(UINib(nibName: "ServerLocationTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "ServerLocationTableViewCell")
         tableView.tableHeaderView = UIView()
@@ -58,7 +61,21 @@ class ServerListViewController: ViewController {
     }
     
     private func updateStatusView() {
-        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+        let status = viewModel.status
+        statusValueLbl.text = status.message
+        if let node = viewModel.connectingLocationNode {
+            groupView.isHidden = false
+            grouplbl.text = node.group
+            if status == .connected {
+                statusSwitch.isOn = true
+            } else if status == .disconnected ||
+                        status == .disconnecting ||
+                        status == .invalid {
+                statusSwitch.isOn = false
+            }
+        } else {
+            groupView.isHidden = true
+        }
     }
     
     private func updateView() {
@@ -69,7 +86,7 @@ class ServerListViewController: ViewController {
     
     private func connectVPN(config: VPNConfiguration) {
         self.viewModel.connectVPN(config, onError: { msg in
-            print("msg")
+            print("msg: \(msg)")
         })
     }
 }
@@ -84,16 +101,8 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerStatusConnectionTableViewCell", for: indexPath) as? ServerStatusConnectionTableViewCell else {
-                return .init()
-            }
-            cell.configure(viewModel.connectingLocationNode,
-                           viewModel.status)
-            cell.selectionStyle = .none
-            return cell
-        }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerLocationTableViewCell", for: indexPath) as? ServerLocationTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServerLocationTableViewCell",
+                                                       for: indexPath) as? ServerLocationTableViewCell else {
             return .init()
         }
         cell.selectionStyle = .none
@@ -110,15 +119,13 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            if let selectedLocation = viewModel.selectedLocation,
-                selectedLocation.id == viewModel.locationAt(indexPath: indexPath).id {
-                self.viewModel.selectedLocation = nil
-            } else {
-                self.viewModel.selectedLocation = viewModel.locationAt(indexPath: indexPath)
-            }
-            self.updateRowAt(indexPath: indexPath)
+        if let selectedLocation = viewModel.selectedLocation,
+            selectedLocation.id == viewModel.locationAt(indexPath: indexPath).id {
+            self.viewModel.selectedLocation = nil
+        } else {
+            self.viewModel.selectedLocation = viewModel.locationAt(indexPath: indexPath)
         }
+        self.updateRowAt(indexPath: indexPath)
     }
     
     private func updateRowAt(indexPath: IndexPath) {
