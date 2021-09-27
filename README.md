@@ -14,7 +14,9 @@
 * Used MVVM architecture.
 * Respected SOLID printciles strictly.
 * Handled connected VPN fail
-* Wrote some unit test
+* Wrote some unit test coverage 69.8% inlcuding API call, viewmodel.
+
+https://github.com/nhattuong92/windscribe_code_challenge/blob/main/unit%20test.png
 
 ## 4. Libraries
 | Name | Purpose |
