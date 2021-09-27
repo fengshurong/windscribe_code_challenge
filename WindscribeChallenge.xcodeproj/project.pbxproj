@@ -14,6 +14,7 @@
 		04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5526FF402E003DBDB0 /* Main.storyboard */; };
 		04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5B26FF4030003DBDB0 /* Assets.xcassets */; };
 		04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */; };
+		753A32F52701C2DF00AB3884 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 753A32F42701C2DF00AB3884 /* README.md */; };
 		7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7574D7622700216C00B64842 /* NetworkExtension.framework */; };
 		7574D76A270045EF00B64842 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D769270045EF00B64842 /* VPNManager.swift */; };
 		7574D772270058E100B64842 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D770270058E100B64842 /* KeychainWrapper.swift */; };
@@ -68,6 +69,7 @@
 		04A67C5B26FF4030003DBDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A67C5E26FF4030003DBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A67C6026FF4030003DBDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		753A32F42701C2DF00AB3884 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		7574D7612700216B00B64842 /* WindscribeChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindscribeChallenge.entitlements; sourceTree = "<group>"; };
 		7574D7622700216C00B64842 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		7574D769270045EF00B64842 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		7574D7662700451B00B64842 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				753A32F42701C2DF00AB3884 /* README.md */,
 				7574D7612700216B00B64842 /* WindscribeChallenge.entitlements */,
 				04A67C5526FF402E003DBDB0 /* Main.storyboard */,
 				04A67C5B26FF4030003DBDB0 /* Assets.xcassets */,
@@ -474,6 +477,7 @@
 				04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */,
 				75F757372701BFFE005910C4 /* ServerListViewController.xib in Resources */,
 				75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */,
+				753A32F52701C2DF00AB3884 /* README.md in Resources */,
 				04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */,
 				04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */,
 				75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */,
@@ -724,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2TYLYAWMK;
 				INFOPLIST_FILE = WindscribeChallenge/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -744,6 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2TYLYAWMK;
 				INFOPLIST_FILE = WindscribeChallenge/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
