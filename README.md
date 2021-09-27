@@ -1,4 +1,4 @@
-# windscribe_code_challenge
+# Windscribe Challenge - Simple application connect VPN
 
 ## 1. Systems
 - iOS target: 14
@@ -10,3 +10,13 @@
 
 ## 3. What I have done in this app
 
+* Used Swiftlint and follow its rules strictly.
+* Used MVVM architecture.
+* Respected SOLID printciles strictly.
+* Handled connected VPN fail
+* Wrote some unit test
+
+## 4. Libraries
+| Name | Purpose |
+| ------------- |-------------|
+| KeyChain | Save password to login to server |
