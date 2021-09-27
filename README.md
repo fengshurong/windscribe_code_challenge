@@ -15,8 +15,7 @@
 * Respected SOLID printciles strictly.
 * Handled connected VPN fail
 * Wrote some unit test coverage 69.8% inlcuding API call, viewmodel.
-
-https://github.com/nhattuong92/windscribe_code_challenge/blob/main/unit%20test.png
+<img width="1178" alt="unit test" src="https://user-images.githubusercontent.com/81760710/134887136-04b96cf5-6066-48e7-b1b7-5389e516955f.png">
 
 ## 4. Libraries
 | Name | Purpose |
