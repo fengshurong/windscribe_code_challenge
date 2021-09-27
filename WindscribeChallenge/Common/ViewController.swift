@@ -9,5 +9,7 @@ import UIKit
 import NetworkExtension
 
 class ViewController: UIViewController {
-    
+    deinit {
+        print("\(self.className) is deallocated")
+    }
 }

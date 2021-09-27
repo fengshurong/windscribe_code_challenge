@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class ServerListViewController: ViewController {
+final class ServerListViewController: ViewController {
     
     class func createView(with viewmodel: ServerListViewModel) -> ServerListViewController {
         let storyboard = UIStoryboard(name: "ServerList", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "ServerListViewController") as? ServerListViewController else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: ServerListViewController.className) as? ServerListViewController else {
             fatalError("Create ViewController Fail")
         }
         vc.viewModel = viewmodel
