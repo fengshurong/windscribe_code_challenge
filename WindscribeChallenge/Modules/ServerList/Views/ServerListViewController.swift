@@ -94,7 +94,7 @@ final class ServerListViewController: ViewController {
     
     private func connectVPN(config: VPNConfiguration) {
         self.viewModel.connectVPN(config, onError: { msg in
-            print("msg: \(msg)")
+            self.showError(msgError: msg)
         })
     }
     
