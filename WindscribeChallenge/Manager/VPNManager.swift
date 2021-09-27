@@ -12,7 +12,7 @@ extension NEVPNStatus {
     var message: String {
         switch self {
         case .invalid:
-            return "Invalid"
+            return "Not Connected"
         case .disconnected:
             return "Disconnected"
         case .connecting:

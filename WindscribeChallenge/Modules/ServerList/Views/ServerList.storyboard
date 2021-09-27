@@ -35,6 +35,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-mq-Dxn">
                                                 <rect key="frame" x="350" y="15" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="statusSwitchValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="u8F-EK-AyI"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkI-HG-SoQ">
                                                 <rect key="frame" x="293.5" y="20.5" width="41.5" height="20.5"/>

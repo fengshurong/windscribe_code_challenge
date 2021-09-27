@@ -16,11 +16,14 @@ class VPNConfiguration {
     }
     var remoteIdentifier: String
     var serverAddress: String
+    var serverName: String
     
-    init(_ location: Location,
-         _ node: Node) {
+    init(_ dnsHostname: String?,
+         _ hostname: String?,
+         _ serverName: String?) {
         self.username = "prd_test_j4d3vk6"
-        self.remoteIdentifier = location.dnsHostname ?? ""
-        self.serverAddress = node.hostname ?? ""
+        self.remoteIdentifier = dnsHostname ?? ""
+        self.serverAddress = hostname ?? ""
+        self.serverName = serverName ?? ""
     }
 }

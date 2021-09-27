@@ -31,7 +31,7 @@ class ServerListViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.configureViuew()
+        self.configureView()
         self.bindViewModel()
     }
     
@@ -49,7 +49,7 @@ class ServerListViewController: ViewController {
         })
     }
     
-    private func configureViuew() {
+    private func configureView() {
         title = "Server List"
         tableView.register(UINib(nibName: "ServerLocationTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "ServerLocationTableViewCell")
@@ -57,6 +57,14 @@ class ServerListViewController: ViewController {
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.configureStatusView()
+    }
+    
+    private func configureStatusView() {
+        statusSwitch.isOn = false
+        statusValueLbl.text = viewModel.status.message
+        groupView.isHidden = true
     }
     
     private func updateStatusView() {
@@ -73,6 +81,9 @@ class ServerListViewController: ViewController {
         if let node = viewModel.connectingLocationNode {
             groupView.isHidden = false
             grouplbl.text = node.group
+        } else if let defaultConfig = viewModel.defaultConfig {
+            groupView.isHidden = false
+            grouplbl.text = defaultConfig.serverName
         } else {
             groupView.isHidden = true
         }
@@ -88,6 +99,18 @@ class ServerListViewController: ViewController {
         self.viewModel.connectVPN(config, onError: { msg in
             print("msg: \(msg)")
         })
+    }
+    
+    @IBAction func statusSwitchValueChanged(_ sender: UISwitch) {
+        guard viewModel.defaultConfig != nil else {
+            sender.isOn = false
+            return
+        }
+        if !sender.isOn {
+            self.viewModel.disconnectVPN()
+        } else {
+            self.viewModel.autoConnectVPN()
+        }
     }
 }
 
@@ -114,7 +137,9 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
             }
             self.viewModel.connectingLocation = location
             self.viewModel.connectingLocationNode = node
-            let config = VPNConfiguration(location, node)
+            let config = VPNConfiguration(location.dnsHostname,
+                                          node.hostname,
+                                          node.group)
             self.connectVPN(config: config)
             self.updateStatusView()
         }

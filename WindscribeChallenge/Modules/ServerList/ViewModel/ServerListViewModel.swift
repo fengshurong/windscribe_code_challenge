@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 import NetworkExtension
 
+enum UserDefaultsKey: String {
+    case dnsHostname
+    case hostname
+    case groupName
+}
+
 class ServerListViewModel {
     
     private let service: WindscribeApi
@@ -19,9 +25,23 @@ class ServerListViewModel {
     var connectingLocationNode: Node?
     var status: NEVPNStatus = VPNManager.shared.status
     private var isAutoConnect: Bool = false
+    var defaultConfig: VPNConfiguration?
     
     init(service: WindscribeApi) {
         self.service = service
+        self.fetchDefaultConfigVPN()
+    }
+    
+    private func fetchDefaultConfigVPN() {
+        let userDefault = UserDefaults.standard
+        guard let dnsHostname = userDefault.string(forKey: UserDefaultsKey.dnsHostname.rawValue),
+              let hostname = userDefault.string(forKey: UserDefaultsKey.hostname.rawValue),
+                let serverName = userDefault.string(forKey: UserDefaultsKey.groupName.rawValue) else {
+            return
+        }
+        self.defaultConfig = VPNConfiguration(dnsHostname,
+                                              hostname,
+                                              serverName)
     }
     
     func vpnStatusDidChange(didChange: (() -> Void)?) {
@@ -33,29 +53,40 @@ class ServerListViewModel {
                 self.isAutoConnect = false
                 self.autoConnectVPN()
             }
+            
+            if status == .connected {
+                self.saveConfigToDefatult()
+            }
             didChange?()
         }
     }
     
     func autoConnectVPN() {
-        guard let connectingLocation = connectingLocation,
-            let node = connectingLocationNode else {
-            return
+        if let connectingLocation = connectingLocation,
+           let node = connectingLocationNode {
+            let config = VPNConfiguration(connectingLocation.dnsHostname,
+                                          node.hostname,
+                                          node.group)
+            self.connectVPN(config) { _ in }
+        } else if let defaultConfig = defaultConfig {
+            self.connectVPN(defaultConfig) { _ in }
         }
-        let config = VPNConfiguration(connectingLocation, node)
-        self.connectVPN(config) { _ in }
     }
     
     func connectVPN(_ config: VPNConfiguration,
                     onError: @escaping ((String) -> Void)) {
         if vpnManager.isDisconnected {
             self.vpnManager.connectIKEv2(config: config,
-                                           onError: onError)
+                                         onError: onError)
         } else {
-            self.vpnManager.disconnect(completionHandler: {
+            self.disconnectVPN {
                 self.isAutoConnect = true
-            })
+            }
         }
+    }
+    
+    func disconnectVPN(_ completionHandler: (() -> Void)? = nil) {
+        self.vpnManager.disconnect(completionHandler: completionHandler)
     }
     
     func retriveServerList(success: @escaping (() -> Void),
@@ -69,6 +100,18 @@ class ServerListViewModel {
                 error(err)
             }
         })
+    }
+    
+    func saveConfigToDefatult() {
+        guard let connectingLocationNode = connectingLocationNode,
+                let connectingLocation = connectingLocation else {
+            return
+        }
+        let userDefault = UserDefaults.standard
+        userDefault.setValue(connectingLocation.dnsHostname, forKey: UserDefaultsKey.dnsHostname.rawValue)
+        userDefault.setValue(connectingLocationNode.hostname, forKey: UserDefaultsKey.hostname.rawValue)
+        userDefault.setValue(connectingLocationNode.group, forKey: UserDefaultsKey.groupName.rawValue)
+        userDefault.synchronize()
     }
 }
 

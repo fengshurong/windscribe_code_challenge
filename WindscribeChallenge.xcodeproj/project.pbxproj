@@ -11,7 +11,6 @@
 		04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A67C5126FF402E003DBDB0 /* SceneDelegate.swift */; };
 		04A67C5426FF402E003DBDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A67C5326FF402E003DBDB0 /* ViewController.swift */; };
 		04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5526FF402E003DBDB0 /* Main.storyboard */; };
-		04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */; };
 		04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5B26FF4030003DBDB0 /* Assets.xcassets */; };
 		04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */; };
 		7574D7632700216C00B64842 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7574D7622700216C00B64842 /* NetworkExtension.framework */; };
@@ -57,7 +56,6 @@
 		04A67C5126FF402E003DBDB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04A67C5326FF402E003DBDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04A67C5626FF402E003DBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04A67C5926FF402E003DBDB0 /* WindscribeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WindscribeChallenge.xcdatamodel; sourceTree = "<group>"; };
 		04A67C5B26FF4030003DBDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A67C5E26FF4030003DBDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A67C6026FF4030003DBDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				04A67C5B26FF4030003DBDB0 /* Assets.xcassets */,
 				04A67C5D26FF4030003DBDB0 /* LaunchScreen.storyboard */,
 				04A67C6026FF4030003DBDB0 /* Info.plist */,
-				04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */,
 				7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */,
 				7583FA712700C87200441A7C /* VPNConfiguration.swift in Sources */,
-				04A67C5A26FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld in Sources */,
 				04A67C5226FF402E003DBDB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,19 +795,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		04A67C5826FF402E003DBDB0 /* WindscribeChallenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				04A67C5926FF402E003DBDB0 /* WindscribeChallenge.xcdatamodel */,
-			);
-			currentVersion = 04A67C5926FF402E003DBDB0 /* WindscribeChallenge.xcdatamodel */;
-			path = WindscribeChallenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 04A67C4426FF402E003DBDB0 /* Project object */;
 }
