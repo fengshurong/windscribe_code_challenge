@@ -12,11 +12,13 @@ import NetworkExtension
 class ServerListViewModel {
     
     private let service: WindscribeApi
+    private let vpnManager = VPNManager.shared
     var locations = [Location]()
     var selectedLocation: Location?
     var connectingLocation: Location?
     var connectingLocationNode: Node?
     var status: NEVPNStatus = VPNManager.shared.status
+    private var isAutoConnect: Bool = false
     
     init(service: WindscribeApi) {
         self.service = service
@@ -24,15 +26,36 @@ class ServerListViewModel {
     
     func vpnStatusDidChange(didChange: (() -> Void)?) {
         VPNManager.shared.statusDidChange = {[weak self] status in
-            self?.status = status
+            guard let self = self else { return }
+            self.status = status
+            if status == .disconnected,
+               self.isAutoConnect {
+                self.isAutoConnect = false
+                self.autoConnectVPN()
+            }
             didChange?()
         }
     }
     
+    func autoConnectVPN() {
+        guard let connectingLocation = connectingLocation,
+            let node = connectingLocationNode else {
+            return
+        }
+        let config = VPNConfiguration(connectingLocation, node)
+        self.connectVPN(config) { _ in }
+    }
+    
     func connectVPN(_ config: VPNConfiguration,
                     onError: @escaping ((String) -> Void)) {
-        VPNManager.shared.connectIKEv2(config: config,
-                                       onError: onError)
+        if vpnManager.isDisconnected {
+            self.vpnManager.connectIKEv2(config: config,
+                                           onError: onError)
+        } else {
+            self.vpnManager.disconnect(completionHandler: {
+                self.isAutoConnect = true
+            })
+        }
     }
     
     func retriveServerList(success: @escaping (() -> Void),
@@ -47,7 +70,10 @@ class ServerListViewModel {
             }
         })
     }
-    
+}
+
+extension ServerListViewModel {
+    // UITableViewDelegate && UITableViewDataSource
     func numberOfSections() -> Int {
         return 1
     }

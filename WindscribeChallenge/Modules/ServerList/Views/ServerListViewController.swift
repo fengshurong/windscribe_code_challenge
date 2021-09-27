@@ -46,7 +46,6 @@ class ServerListViewController: ViewController {
         
         viewModel.vpnStatusDidChange(didChange: {[weak self] in
             self?.updateStatusView()
-            self?.updateView()
         })
     }
     
@@ -63,16 +62,17 @@ class ServerListViewController: ViewController {
     private func updateStatusView() {
         let status = viewModel.status
         statusValueLbl.text = status.message
+        if status == .connected {
+            statusSwitch.isOn = true
+        } else if status == .disconnected ||
+                    status == .disconnecting ||
+                    status == .invalid {
+            statusSwitch.isOn = false
+        }
+        
         if let node = viewModel.connectingLocationNode {
             groupView.isHidden = false
             grouplbl.text = node.group
-            if status == .connected {
-                statusSwitch.isOn = true
-            } else if status == .disconnected ||
-                        status == .disconnecting ||
-                        status == .invalid {
-                statusSwitch.isOn = false
-            }
         } else {
             groupView.isHidden = true
         }
@@ -109,6 +109,9 @@ extension ServerListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureData(viewModel.locationAt(indexPath: indexPath),
                            viewModel.selectedLocation)
         cell.didSelectedLocationNode = { [unowned self] location, node in
+            guard viewModel.connectingLocationNode == nil || viewModel.connectingLocationNode!.ip != node.ip else {
+                return
+            }
             self.viewModel.connectingLocation = location
             self.viewModel.connectingLocationNode = node
             let config = VPNConfiguration(location, node)

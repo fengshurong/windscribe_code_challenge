@@ -29,8 +29,6 @@
 		7574D79127006B3900B64842 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D79027006B3900B64842 /* ServerListViewModel.swift */; };
 		7583FA712700C87200441A7C /* VPNConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583FA702700C87200441A7C /* VPNConfiguration.swift */; };
 		75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B127006F3000C80AB5 /* ServerList.storyboard */; };
-		75FA15B727006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */; };
-		75FA15B827006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */; };
 		75FA15BB27006FC500C80AB5 /* ServerLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */; };
 		75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */; };
 		75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */; };
@@ -80,8 +78,6 @@
 		7574D79027006B3900B64842 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
 		7583FA702700C87200441A7C /* VPNConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConfiguration.swift; sourceTree = "<group>"; };
 		75FA15B127006F3000C80AB5 /* ServerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServerList.storyboard; sourceTree = "<group>"; };
-		75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatusConnectionTableViewCell.swift; sourceTree = "<group>"; };
-		75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerStatusConnectionTableViewCell.xib; sourceTree = "<group>"; };
 		75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationTableViewCell.swift; sourceTree = "<group>"; };
 		75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerLocationTableViewCell.xib; sourceTree = "<group>"; };
 		75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLocationNodeTableViewCell.swift; sourceTree = "<group>"; };
@@ -291,8 +287,6 @@
 		75FA15B427006F9200C80AB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				75FA15B527006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift */,
-				75FA15B627006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib */,
 				75FA15B927006FC500C80AB5 /* ServerLocationTableViewCell.swift */,
 				75FA15BA27006FC500C80AB5 /* ServerLocationTableViewCell.xib */,
 				75FA15BD27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift */,
@@ -439,7 +433,6 @@
 				04A67C5F26FF4030003DBDB0 /* LaunchScreen.storyboard in Resources */,
 				75FA15BC27006FC500C80AB5 /* ServerLocationTableViewCell.xib in Resources */,
 				04A67C5C26FF4030003DBDB0 /* Assets.xcassets in Resources */,
-				75FA15B827006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.xib in Resources */,
 				04A67C5726FF402E003DBDB0 /* Main.storyboard in Resources */,
 				75FA15B227006F3000C80AB5 /* ServerList.storyboard in Resources */,
 				75FA15C027006FE100C80AB5 /* ServerLocationNodeTableViewCell.xib in Resources */,
@@ -517,7 +510,6 @@
 				7574D77827005EF700B64842 /* Location.swift in Sources */,
 				7574D76A270045EF00B64842 /* VPNManager.swift in Sources */,
 				75FA15BF27006FE100C80AB5 /* ServerLocationNodeTableViewCell.swift in Sources */,
-				75FA15B727006FAE00C80AB5 /* ServerStatusConnectionTableViewCell.swift in Sources */,
 				7574D77D2700604200B64842 /* WindscribeApi.swift in Sources */,
 				7574D773270058E100B64842 /* KeychainItemAccessibility.swift in Sources */,
 				7574D78A2700685B00B64842 /* ServerListViewController.swift in Sources */,
