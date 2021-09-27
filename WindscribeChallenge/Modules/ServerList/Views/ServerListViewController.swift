@@ -2,19 +2,16 @@
 //  ServerListViewController.swift
 //  WindscribeChallenge
 //
-//  Created on 26/09/2021.
+//  Created on 27/09/2021.
 //
 
-import Foundation
 import UIKit
 
 final class ServerListViewController: ViewController {
     
     class func createView(with viewmodel: ServerListViewModel) -> ServerListViewController {
-        let storyboard = UIStoryboard(name: "ServerList", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: ServerListViewController.className) as? ServerListViewController else {
-            fatalError("Create ViewController Fail")
-        }
+        let vc = ServerListViewController.init(nibName: ServerListViewController.className,
+                                               bundle: nil)
         vc.viewModel = viewmodel
         return vc
     }
