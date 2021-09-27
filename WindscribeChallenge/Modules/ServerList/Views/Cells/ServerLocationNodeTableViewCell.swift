@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServerLocationNodeTableViewCell: UITableViewCell {
+final class ServerLocationNodeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var groupNameLbl: UILabel!
     

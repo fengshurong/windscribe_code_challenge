@@ -15,7 +15,7 @@ enum UserDefaultsKey: String {
     case groupName
 }
 
-class ServerListViewModel {
+final class ServerListViewModel {
     
     private let service: WindscribeApi
     private let vpnManager = VPNManager.shared

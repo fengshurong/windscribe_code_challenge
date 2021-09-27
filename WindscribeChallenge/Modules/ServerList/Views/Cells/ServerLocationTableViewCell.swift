@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServerLocationTableViewCell: UITableViewCell {
+final class ServerLocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var expandButton: UIButton!
     @IBOutlet weak var locationNameLbl: UILabel!
